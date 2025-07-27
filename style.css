@@ -1,0 +1,255 @@
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  header {
+    background: #28293d;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+      padding-left: 10px;
+      &:hover {
+        color: #4db8ff;
+      }
+    }
+  }
+  main {
+    background-image: url(img/Idleon_Banner.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: large;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: "Arial", sans-serif;
+    margin-bottom: 20px;
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+      display: inline-block;
+
+      &:hover {
+        color: #4db8ff;
+        text-decoration: none;
+      }
+    }
+    h1,
+    .text p,
+    a {
+      transition:
+        color 0.3s,
+        transform 0.3s; /* плавный переход цвета и масштаба */
+      display: inline-block;
+    }
+
+    h1:hover,
+    .text p:hover,
+    a:hover {
+      transform: scale(1.1); /* увеличение */
+    }
+  }
+  body {
+    background: #1e1e2f;
+    color: #ddd;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .classes {
+    padding: 40px;
+    h1 {
+      color: #4db8ff;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  }
+  .family {
+    margin-bottom: 50px;
+  }
+  .family h2 {
+    color: #4db8ff;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  .class-card {
+    background: #29293d;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  .class-card:hover {
+    transform: translateY(-5px);
+  }
+  .class-card img {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+  .class-card h3 {
+    color: #fff;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+  }
+  .class-card p {
+    font-size: 0.9em;
+    color: #ccc;
+    line-height: 1.4;
+  }
+  .worlds {
+    padding: 40px;
+  }
+
+  .worlds h1 {
+    color: #4db8ff;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .worlds-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .world-card {
+    background: #29293d;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+
+  .world-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .world-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  .world-card h3 {
+    color: #fff;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+  }
+
+  .world-card p {
+    font-size: 0.9em;
+    color: #ccc;
+    line-height: 1.4;
+  }
+  .idleon-talk {
+    position: relative;
+    height: 200px;
+    overflow: visible;
+  }
+
+  #helper {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 999;
+    transition:
+      left 1.5s ease,
+      top 1.5s ease;
+  }
+
+  #helper img {
+    width: 80px;
+    image-rendering: pixelated;
+  }
+
+  .speech-bubble {
+    position: absolute;
+    top: -10px;
+    left: 100%;
+    margin-left: 10px;
+    background: #fff;
+    color: #000;
+    padding: 10px 15px;
+    border-radius: 15px;
+    width: 200px;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transition: opacity 0.5s;
+  }
+
+  .speech-bubble::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #fff transparent transparent;
+  }
+
+  #speech a#downloadBtn {
+    display: block;
+    margin-top: 8px;
+    background: #4db8ff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+
+  #speech a#downloadBtn:hover {
+    background: #368ecf;
+  }
+  .helper-sleeping::after {
+    content: "💤";
+    position: absolute;
+    top: -20px;
+    right: -10px;
+    font-size: 24px;
+    animation: zzz 1.2s infinite alternate ease-in-out;
+  }
+
+  @keyframes zzz {
+    0% {
+      opacity: 0.2;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(-5px);
+    }
+  }
+  #helper {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+    transition:
+      left 1.5s ease,
+      top 1.5s ease;
+  }
